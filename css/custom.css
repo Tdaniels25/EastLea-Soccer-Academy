@@ -1,0 +1,47 @@
+h2.text-color-primary,
+h3.text-color-primary{
+    color:#D25425 !important;
+}
+
+.btn {
+    border-color: #D25425 !important;
+}
+.btn:hover{
+    background-color:#D25425 !important ;
+}
+.header-body.bg-dark {
+    background-color: white !important;
+  }
+  
+  a.dropdown-item {
+    color: black !important;
+  }
+  
+  a.dropdown-item:hover {
+    color:#D25425 !important;
+  }
+  .divider.divider-primary.divider-small hr{
+    background-color:#D25425 !important;
+  }
+
+  .btn-outline.btn-primary{
+    color:#D25425 !important ;
+  }
+
+  .btn-outline.btn-primary:hover{
+    color:#fff !important ;
+  }
+
+  .custom-section-halfbar-bg{
+    background-color:#85C9E8;
+  }
+
+  .d-block.mb-2{
+    color: #D25425 !important;
+  }
+
+  .section.section-parallax.section-height-4.overlay {
+    background-color: #85C9E8 !important;
+    background-image: none !important;
+  }
+  
