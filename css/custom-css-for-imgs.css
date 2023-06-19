@@ -5,11 +5,17 @@ body {
     align-items: center;
     flex-direction: column;
     font-family: sans-serif;
+    background-image: linear-gradient(to right, rgb(137, 137, 58) , orange);
   }
+
+  #grad {
+    
+  }
+  
   
   /* Styling for the heading */
   h1 {
-    color: coral;
+    color: black;
   }
   
   /* Styling for the grid container */
