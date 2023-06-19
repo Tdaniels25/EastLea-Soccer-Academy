@@ -1,20 +1,109 @@
 /* The overall layout and styling for the page */
 body {
+    /* Background gradient */
+    background: -moz-linear-gradient(45deg, #b8e102 0%, #f2bc26 29%, #ee7c02 66%, #ffa079 100%);
+    background: -webkit-linear-gradient(45deg, #d6e102 0%,#cb9a28 29%,#e17706 66%,#ffa079 100%);
+    background: linear-gradient(45deg, #e17502 0%,#cf9e0b 29%,#f57600 66%,#ffa079 100%);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    /* Layout and positioning */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
     font-family: sans-serif;
-    background-image: linear-gradient(to right, rgb(137, 137, 58) , orange);
-  }
+}
 
-  #grad {
-    
-  }
-  
-  
+/* Pseudo-elements before and after the main container */
+body::before,
+body::after {
+    content: "";
+    width: 70vmax;
+    height: 70vmax;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.07);
+    left: -20vmin;
+    top: -20vmin;
+    animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+    z-index: 1;
+    will-change: border-radius, transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+}
+
+/* Styling for the second pseudo-element */
+body::after {
+    width: 70vmin;
+    height: 70vmin;
+    left: auto;
+    right: -10vmin;
+    top: auto;
+    bottom: 0;
+    animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+    transform-origin: 20% 20%;
+}
+
+/* Keyframes for the gradient animation */
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+/* Keyframes for the morph animation */
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+    100% {
+        border-radius: 40% 60%;
+    }
+}
+
+/* Keyframes for the spin animation */
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+
   /* Styling for the heading */
   h1 {
+    text-align: center;
     color: black;
   }
   
