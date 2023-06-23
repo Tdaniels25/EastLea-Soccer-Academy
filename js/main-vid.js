@@ -1,3 +1,14 @@
+const heading = document.getElementById("heading");
+
+// Animate the heading on page load
+gsap.from(heading, {
+  opacity: 0,
+  y: -50,
+  color: "red", // Change the color property to your desired color
+  duration: 4.5
+});
+
+
 const videoContainers = document.querySelectorAll(".video-container");
 videoContainers.forEach((container) => {
   const video = container.querySelector(".gallery-video");

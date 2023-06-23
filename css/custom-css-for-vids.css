@@ -1,14 +1,18 @@
+#heading {
+  text-align: center;
+}
+
 .video-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: -100px; /* Add negative margin to counteract the spacing */
 }
 
 .video-container {
-  margin: 10px;
+  margin: 100px; /* Add margin to create the desired spacing */
   width: 400px;
-  position: relative;
 }
 
 .video-container video.gallery-video {
@@ -18,4 +22,16 @@
   left: 0;
   opacity: 0;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    width: calc(50% - 50px); /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    width: calc(100% - 50px); /* Adjust width for even smaller screens */
+  }
 }
