@@ -52,6 +52,17 @@
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
+		<script>
+			let docTitle = document.title;
+			window.addEventListener("blur", () => {
+   				document.title = "Main page come back!";
+			});
+
+			window.addEventListener("focus", () => {
+    			document.title = docTitle;
+			});
+		</script>
+
 	</head>
 	<body data-plugin-scroll-spy data-plugin-options="{'target': '#header'}">
 
@@ -423,7 +434,7 @@
 
 				<!-- Links to the photo gallery and video gallery -->
 				<div class="container2">
-					<a class="button0" href="#" style="--color:#1e9bff">
+					<a class="button0" href="Gallery-images.html" target="_blank" style="--color:#1e9bff">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -431,7 +442,7 @@
 						Photo
 					</a>
 
-					<a class="button0" href="#" style="--color: #ff1867">
+					<a class="button0" href="Gallery-videos.html" target="_blank" style="--color: #ff1867">
 						<span></span>
 						<span></span>
 						<span></span>
