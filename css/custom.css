@@ -1,3 +1,5 @@
+* {box-sizing: border-box;}
+
 #header.header-no-border-bottom .header-nav.header-nav-line {
   border-bottom-color: #f17f29 !important;
 }
